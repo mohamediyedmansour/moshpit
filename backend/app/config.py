@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     PORT: int = 8000
 
     ALLOWED_ORIGINS: List[str] = ["*"]
-    MAX_UPLOAD_SIZE_MB: int = 512
+    MAX_UPLOAD_SIZE_MB: int = 512 #500 megs max size
 
     class Config:
         env_file = ".env"

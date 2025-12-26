@@ -34,7 +34,6 @@ app = FastAPI(
 )
 
 
-# CORS (lock this down in prod)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.ALLOWED_ORIGINS,
@@ -45,7 +44,6 @@ app.add_middleware(
 
 app.add_middleware(UploadSizeLimitMiddleware)
 
-# Routers
 app.include_router(health_router)
 app.include_router(upload_router)
 

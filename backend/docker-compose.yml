@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  moshpit:
+    build: .
+    container_name: moshpit
+    ports:
+      - "8000:8000"
+    environment:
+      APP_NAME: moshpit
+      DEBUG: "false"
+      ALLOWED_ORIGINS: '["*"]'
+      MAX_UPLOAD_SIZE_MB: "512"
+    restart: unless-stopped
+
