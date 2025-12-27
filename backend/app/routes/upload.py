@@ -3,8 +3,8 @@ from fastapi.responses import Response
 from starlette.status import HTTP_201_CREATED
 
 from app.mosh.video import mosh_video
-from app.mosh.image import mosh_image
 from app.mosh.audio import mosh_audio
+from app.mosh.image import mosh_pixels as mosh_image
 
 router = APIRouter()
 
